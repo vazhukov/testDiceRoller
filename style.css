@@ -37,6 +37,8 @@ button:hover {
 th {
   border: 1px solid gray;
   border-radius: 5px;
+  background-color: rgb(82, 186, 179);
+  color: white;
 }
 
 td {
@@ -89,7 +91,7 @@ td:hover {
   border-radius: 10px;
 }
 .logItem:hover {
-  border-color: rgb(44, 129, 127);
+  border-color: rgb(82, 186, 179);
 }
 
 .tip {
@@ -119,7 +121,7 @@ td:hover {
   position: relative;
   color: #06C;
   text-decoration: none;
-  cursor: default;
+  cursor: pointer;
 }
 a.support-hover:hover .tip {
   display:block;
