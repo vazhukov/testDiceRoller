@@ -1,6 +1,6 @@
 # testDiceRoller
 
-simplediceroller.h1n.ru
+https://simplediceroller.h1n.ru/
 
 ### Дополнительные фичи:
 - личный кабинет
