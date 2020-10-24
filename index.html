@@ -8,8 +8,21 @@
 </head>
 
 <body>
+  <h1>Simple Dice Roller</h1>
   <p id="placeholder"></p>
-  <input type="text" id="console" placeholder="type a command or use the table"><button id="button">Roll</button><br>
+  <a class='support-hover' tabindex="1"><input type="text" id="console" placeholder="type a command or use the table">
+    <span class="tip">
+      Command looks like: <b>&lt;command&gt; &lt;dice1&gt; &lt;dice2&gt; ... &lt;bonus&gt;</b><br>
+      Where <b>&lt;command&gt;</b> = [ min, max, sum, roll, ability ]; <b>&lt;dice&gt;</b> = &lt;count&gt;d&lt;sides&gt;<br>
+      <b>min</b>: finds the minimum among all dice rolls and adds bonus<br>
+      <b>max</b>: finds the maximum among all dice rolls and adds bonus<br>
+      <b>sum</b>: finds the sum among all dice rolls and adds bonus<br>
+      <b>roll</b>: shows the first four dice rolls<br>
+      <b>ability</b>: counts one of the ability scores when generating a character<br><br>
+      Examples: <b>roll 2d4</b> | <b>sum 2d6 1d4 2</b> | <b>min 2d20 -3</b> | <b>ability</b> | <b>sum 2d6 d8 3d10</b>
+    </span>
+  </a>
+  <button id="button">Roll</button><br>
   <table id="rollTable">
     <tr>
       <th>d4</th><th>d6</th><th>d8</th><th>d10</th><th>d12</th><th>d20</th><th>d100</th>
@@ -21,9 +34,6 @@
   </table>
   <ul id="log">
     <li id="logHeader"><h3>History of dice rolls</h3></li>
-    <li class="logItem">roll 3d6</li>
-    <li class="logItem">roll 3d6 2d8</li>
-    <li class="logItem">roll 3d6 d20 dlk adjlfkaj dafd dualkdjf dalkduf adkfha dlfaidl fk adjfiuet qpeflda dkfjadlfia yodflk adlakdj ifadl</li>
   </ul>
   <script src="script.js"></script>
 </body>
