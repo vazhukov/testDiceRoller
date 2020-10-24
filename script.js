@@ -5,6 +5,9 @@ const CRIT_LUCK = "#349479";
 
 const LOG_HEADER = document.getElementById('logHeader');
 const PLACEHOLDER = document.getElementById('placeholder');
+const BUTTON = document.getElementById('button');
+const TABLE = document.getElementById('rollTable');
+const CONSOLE  = document.getElementById('console');
 
 const ERROR = "Error";
 const ABL = "ability";
@@ -151,16 +154,20 @@ function printDiceGroups(diceGroups, docElem) {
 }
 
 
-let button = document.getElementById('button');
-let table = document.getElementById('rollTable');
-
-table.onclick = function(event) {
+TABLE.onclick = function(event) {
   let td = event.target.closest('td');
-  if (!td || !table.contains(td)) return;
+  if (!td || !TABLE.contains(td)) return;
   letsRoll([ROLL, dieToStr(td.innerHTML, td.getAttribute("die"))]);
 };
 
-button.onclick = function() {
-  letsRoll(document.getElementById("console").value.split(" "));
-  document.getElementById("console").value = "";
+BUTTON.onclick = function() {
+  letsRoll(CONSOLE.value.split(" "));
+  CONSOLE.value = "";
+}
+
+CONSOLE.onkeypress = function(key) {
+  if (key.keyCode == 13 || key.which == 13) {
+    letsRoll(CONSOLE.value.split(" "));
+    CONSOLE.value = "";
+  }
 }
